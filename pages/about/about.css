@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Farsan&family=Poppins&display=swap");
+
+:root {
+  --azul: #06283d;
+  --rojo: #ff4040;
+  --gris: #334155;
+  --grisclaro: #aaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nunito;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgb(245, 235, 220);
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+}
+header {
+  height: 18vh;
+  background-color: rgba(255, 245, 220, 0.8);
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+.logo {
+  height: 6rem;
+  margin-top: 1rem;
+}
+.logo:hover {
+  transition: transform 1s;
+  transform: scale(1.2);
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+ul li a {
+  text-decoration: none;
+  color: #333;
+}
+ul li:hover {
+  transform: scaleX(1.1);
+}
+ul li a:hover {
+  font-weight: 800;
+}
+
+#burger-cart {
+  align-self: center;
+  font-size: 2rem;
+  color: #121212;
+  cursor: pointer;
+}
+
+.about-sect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  background: linear-gradient(
+    to top,
+    rgb(150, 127, 83),
+    rgba(255, 245, 220, 0.8)
+  );
+}
+.about-sect h1 {
+  font-family: "Bebas Neue";
+  font-size: 4rem;
+  letter-spacing: 2px;
+  word-spacing: 6px;
+}
+
+.about-sect p {
+  width: 50%;
+  font-family: "Poppins";
+}
+
+.history-sect {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    rgb(150, 127, 83),
+    rgba(255, 245, 220, 0.8)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.history-div1 {
+  height: 50vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(150, 127, 83, 0.4),
+    rgba(0, 0, 0, 0.2)
+  );
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12vh;
+}
+.history-sect h2 {
+  font-size: 3rem;
+  font-family: "Bebas Neue";
+  letter-spacing: 2px;
+  margin-top: 30px;
+}
+.history-sect img {
+  width: 40%;
+  height: 50vh;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 4px;
+  top: 10vh;
+  box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.6);
+}
+
+.history-sect p {
+  width: 60%;
+  font-family: "Poppins";
+  line-height: 1.8rem;
+}
+
+footer {
+  height: 25vh;
+  margin-top: 60px;
+  display: flex;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 245, 220, 0.8),
+    rgba(0, 0, 0, 0.8)
+  );
+  box-shadow: 0 0 6px 1px #000;
+}
+.footer-p-cont {
+  width: 60vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+}
+.footer-social {
+  display: flex;
+  flex-direction: column;
+}
+.footer-social h2 {
+  font-family: "Poppins";
+  font-weight: 600;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.footer-social-icons a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: transparent;
+  font-size: 40px;
+}
+.footer-social-icons a:first-child {
+  color: rgb(30, 48, 80);
+}
+.footer-social-icons a:nth-child(2) {
+  color: rgb(29, 154, 239);
+}
+.footer-social-icons a:nth-child(3) {
+  color: rgb(20, 20, 20);
+}
+
+/* MEDIAS */
+@media screen and (max-width: 425px) {
+  .about-sect {
+    padding: 0;
+  }
+  .about-sect p {
+    width: 65%;
+  }
+  .history-sect img {
+    width: auto;
+    margin-top: 10px;
+  }
+  .history-sect p {
+    width: 85%;
+  }
+  .footer-p-cont {
+    align-items: flex-end;
+    padding-bottom: 10px;
+  }
+  .footer-social h2 {
+    font-size: 1rem;
+  }
+  .footer-social-icons a {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-sect p {
+    width: 65%;
+  }
+  .history-sect img {
+    margin-top: 20px;
+  }
+  .history-div1 {
+    margin-bottom: 16vh;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .history-sect img {
+    margin-top: 20px;
+  }
+  .history-div1 {
+    margin-bottom: 16vh;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1500px) {
+  .history-sect img {
+    margin-top: 20px;
+  }
+  .history-div1 {
+    margin-bottom: 16vh;
+  }
+}
